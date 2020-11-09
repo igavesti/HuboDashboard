@@ -9,8 +9,8 @@ request.onload = function () {
     
 	data.forEach(incomplete_transaction => {
 		table.row.add( [
-            incomplete_transaction.id_transaction,
-            incomplete_transaction.customer
+            incomplete_transaction.id,
+            incomplete_transaction.fk_customer_id
         ] ).draw( false );
     });
   } else {
