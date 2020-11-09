@@ -1,7 +1,7 @@
 var table = $('#dataTable').DataTable();     
 
 var request = new XMLHttpRequest();
-request.open('GET', 'http://localhost:8080/data-customer', true);
+request.open('GET', 'https://hubo-service.herokuapp.com/data-customer', true);
 request.onload = function () {
 
   var data = JSON.parse(this.response);

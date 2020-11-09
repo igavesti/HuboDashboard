@@ -7,7 +7,7 @@ customer = customer ? customer[1].replace(/"/g, '&quot;') : '';
 var table = $('#dataTable').DataTable();     
 
 var request = new XMLHttpRequest();
-request.open('GET', 'http://localhost:8080/incomplete-transaction-detail/'+id+'/'+customer, true);
+request.open('GET', 'https://hubo-service.herokuapp.com/incomplete-transaction-detail/'+id+'/'+customer, true);
 request.onload = function () {
 
   var data = JSON.parse(this.response);

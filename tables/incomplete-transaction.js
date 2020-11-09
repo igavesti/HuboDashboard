@@ -1,7 +1,7 @@
 var table = $('#dataTable').DataTable();     
 
 var request = new XMLHttpRequest();
-request.open('GET', 'http://localhost:8080/incomplete-transaction', true);
+request.open('GET', 'https://hubo-service.herokuapp.com/incomplete-transaction', true);
 request.onload = function () {
 
   var data = JSON.parse(this.response);
