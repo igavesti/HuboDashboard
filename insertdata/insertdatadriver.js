@@ -33,7 +33,7 @@ $(function () {
 
 
     // FOR DEMO PURPOSE
-    $('#reservationDate').on('change', function () {
+    $('#inputTanggalLahir').on('change', function () {
         var pickedDate = $('input').val();
         $('#pickedDate').html(pickedDate);
     });

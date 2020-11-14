@@ -10,6 +10,8 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/datatables.css" rel="stylesheet"/>
         <link href="css/jquerydatatables.css" rel="stylesheet"/>
+        <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+        <link href="css/date.css" rel="stylesheet"/>
         <script src="js/ajax.js"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -81,13 +83,19 @@
 							<form>
 								<div class="form-group"><label class="small mb-1" for="inputNama">Nama</label><input class="form-control py-4" id="inputNama" type="text" placeholder="Enter Nama" /></div>
 								<div class="form-group"><label class="small mb-1" for="inputTempatLahir">Tempat Lahir</label><input class="form-control py-4" id="inputTempatLahir" type="text" placeholder="Enter Tempat Lahir" /></div>
-								<div class="form-group"><label class="small mb-1" for="inputTanggalLahir">Tanggal Lahir</label><input class="form-control py-4" id="inputTanggalLahir" type="text" placeholder="Enter Tanggal Lahir" /></div>
+								
+									<label class="small mb-1" for="inputTanggalLahir">Tanggal Lahir</label>
+								<div class="datepicker date input-group">
+									<input type="text" placeholder="Enter Tanggal Lahir" class="form-control py-4 input-group-append" id="inputTanggalLahir">
+								</div>
+								
 								<div class="form-group"><label class="small mb-1" for="inputDomisili">Domisili</label><input class="form-control py-4" id="inputDomisili" type="text" placeholder="Enter Domisili" /></div>
 								
 								<div class="form-group">
 									<label for="inputImageKTP">Upload KTP</label>
 									<input type="file" class="form-control-file" id="inputImageKTP">
 								</div>
+								
 								<div class="form-group">
 									<label for="inputImageKK">Upload KK</label>
 									<input type="file" class="form-control-file" id="inputImageKK">
@@ -128,6 +136,7 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
         <script src="insertdata/insertdatadriver.js"></script>
     </body>
 </html>
