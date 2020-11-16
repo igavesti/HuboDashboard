@@ -17,7 +17,17 @@ getDataRequest.onload = function () {
 	document.getElementById("inputTempatLahir").value = data.tempat_lahir;
 	document.getElementById("inputTanggalLahir").value = data.tanggal_lahir;
 	document.getElementById("inputDomisili").value = data.domisili;
-		//TODO
+	
+	
+	var opts = document.getElementById("inputStatus").options;
+	for (var opt, j = 0; opt = opts[j]; j++) {
+		if (opt.value == data.status) {
+			document.getElementById("inputStatus").selectedIndex = j;
+			break;
+		}
+	}
+	
+	//TODO
 	//document.getElementById("inputImageKTP").value = data.image_ktp;
 	//document.getElementById("inputImageKK").value = data.image_kk;
 	//document.getElementById("inputImageSKCK").value = data.image_skck;
@@ -52,6 +62,7 @@ function updatedata() {
 		"tempat_lahir": document.getElementById("inputTempatLahir").value, 
 		"tanggal_lahir": document.getElementById("inputTanggalLahir").value, 
 		"domisili": document.getElementById("inputDomisili").value,
+		"status": document.getElementById("inputStatus").value,
 		//TODO
 		//"image_ktp": document.getElementById("inputImageKTP").value
 		//"image_kk": document.getElementById("inputImageKK").value,

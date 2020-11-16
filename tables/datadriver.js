@@ -14,6 +14,7 @@ request.onload = function () {
             data_kendaraan.tempat_lahir,
             data_kendaraan.tanggal_lahir,
             data_kendaraan.domisili,
+            data_kendaraan.status,
             data_kendaraan.image_ktp,
             data_kendaraan.image_kk,
             data_kendaraan.image_skck,
