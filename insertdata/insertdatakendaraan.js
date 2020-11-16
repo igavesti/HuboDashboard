@@ -22,4 +22,20 @@ function insertdata() {
 	));
 }
 
+$(function () {
+
+    // INITIALIZE DATEPICKER PLUGIN
+    $('.datepicker').datepicker({
+        clearBtn: true,
+        format: "dd/mm/yyyy"
+    });
+
+
+    // FOR DEMO PURPOSE
+    $('#inputTanggalBerlaku').on('change', function () {
+        var pickedDate = $('input').val();
+        $('#pickedDate').html(pickedDate);
+    });
+});
+
 insert_button.onclick = insertdata;
