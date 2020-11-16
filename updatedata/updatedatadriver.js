@@ -15,7 +15,7 @@ getDataRequest.onload = function () {
   if (getDataRequest.status >= 200 && getDataRequest.status < 400) {
 	document.getElementById("inputNama").value = data.nama;
 	document.getElementById("inputTempatLahir").value = data.tempat_lahir;
-	document.getElementById("inputTanggalLahir").value = data.tanggal_lahir;
+	document.getElementById("inputTanggalLahir").value = format(data.tanggal_lahir);
 	document.getElementById("inputDomisili").value = data.domisili;
 	
 	
@@ -90,5 +90,12 @@ $(function () {
         $('#pickedDate').html(pickedDate);
     });
 });
+
+function format(inputDate) {
+    var date = new Date(inputDate);
+    if (!isNaN(date.getTime())) {
+        return date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
+    }
+}
 
 update_button.onclick = updatedata;

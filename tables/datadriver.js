@@ -12,7 +12,7 @@ request.onload = function () {
             data_kendaraan.id,
             data_kendaraan.nama,
             data_kendaraan.tempat_lahir,
-            data_kendaraan.tanggal_lahir,
+            format(data_kendaraan.tanggal_lahir),
             data_kendaraan.domisili,
             data_kendaraan.status,
             data_kendaraan.image_ktp,
@@ -57,3 +57,10 @@ $(document).ready(function() {
 		window.location.href = "layout-insert-data-driver.html";
     } );
 } );
+
+function format(inputDate) {
+    var date = new Date(inputDate);
+    if (!isNaN(date.getTime())) {
+        return date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
+    }
+}

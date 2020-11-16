@@ -23,7 +23,7 @@ request.onload = function () {
             data_kendaraan.warna_tnkb,
             data_kendaraan.tahun_registrasi,
             data_kendaraan.nomor_bpkb,
-            data_kendaraan.tanggal_berlaku,
+            format(data_kendaraan.tanggal_berlaku),
             data_kendaraan.image_stnk_depan,
             data_kendaraan.image_stnk_belakang
         ] ).draw( false );
@@ -63,3 +63,10 @@ $(document).ready(function() {
 		window.location.href = "layout-insert-data-kendaraan.html";
     } );
 } );
+
+function format(inputDate) {
+    var date = new Date(inputDate);
+    if (!isNaN(date.getTime())) {
+        return date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
+    }
+}

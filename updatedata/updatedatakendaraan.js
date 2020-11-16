@@ -26,7 +26,7 @@ getDataRequest.onload = function () {
 	document.getElementById("inputWarnaTnkb").value = data.warna_tnkb;
 	document.getElementById("inputTahunRegistrasi").value = data.tahun_registrasi;
 	document.getElementById("inputNomorBPKB").value = data.nomor_bpkb;
-	document.getElementById("inputTanggalBerlaku").value = data.tanggal_berlaku;
+	document.getElementById("inputTanggalBerlaku").value = format(data.tanggal_berlaku);
 		//TODO
 	//document.getElementById("inputSTNKDepan").value = data.image_stnk_depan;
 	//document.getElementById("inputSTNKBelakang").value = data.image_stnk_belakang;
@@ -93,5 +93,12 @@ $(function () {
         $('#pickedDate').html(pickedDate);
     });
 });
+
+function format(inputDate) {
+    var date = new Date(inputDate);
+    if (!isNaN(date.getTime())) {
+        return date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
+    }
+}
 
 update_button.onclick = updatedata;
