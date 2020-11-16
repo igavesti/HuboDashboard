@@ -14,10 +14,22 @@ function insertdata() {
 	request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	request.send(JSON.stringify(
 	{
-		"from": document.getElementById("inputFrom").value,
-		"to": document.getElementById("inputTo").value, 
-		"harga": document.getElementById("inputRpKg").value, 
-		"borongan": document.getElementById("inputBorongan").value
+		"no_pol": document.getElementById("inputNoPol").value,
+		"jenis": document.getElementById("inputJenis").value,
+		"tahun_pembuatan": document.getElementById("inputTahunPembuatan").value,
+		"warna_mobil": document.getElementById("inputWarnaMobil").value,
+		"nama_pemilik": document.getElementById("inputNamaPemilik").value,
+		"alamat": document.getElementById("inputAlamat").value,
+		"merk": document.getElementById("inputMerk").value,
+		"no_rangka": document.getElementById("inputNoRangka").value,
+		"no_mesin": document.getElementById("inputNoMesin").value,
+		"bahan_bakar": document.getElementById("inputBahanBakar").value,
+		"warna_tnkb": document.getElementById("inputWarnaTnkb").value,
+		"tahun_registrasi": document.getElementById("inputTahunRegistrasi").value,
+		"nomor_bpkb": document.getElementById("inputNomorBPKB").value,
+		"tanggal_berlaku": document.getElementById("inputTanggalBerlaku").value,
+		"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
+		"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
 	}
 	));
 }

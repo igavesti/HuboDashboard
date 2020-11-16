@@ -16,7 +16,7 @@ function insertdata() {
 	{
 		"nama": document.getElementById("inputNama").value,
 		"alamat": document.getElementById("inputAlamat").value, 
-		"no_telp": document.getElementById("inputNoKTP").value, 
+		"no_telp": document.getElementById("inputNoTelp").value, 
 		"pic": document.getElementById("inputPIC").value
 	}
 	));

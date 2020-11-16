@@ -10,7 +10,7 @@ request.onload = function () {
 	data.forEach(data_kendaraan => {
 		table.row.add( [
             data_kendaraan.id,
-            data_kendaraan.no_stnk,
+            data_kendaraan.no_pol,
             data_kendaraan.jenis,
             data_kendaraan.tahun_pembuatan,
             data_kendaraan.warna_mobil,
@@ -55,7 +55,7 @@ $(document).ready(function() {
 			alert('Please select the row before edit');
         }
 		else {
-			alert(table.row('.selected').data()[0]);
+			window.location.href = "layout-update-data-kendaraan.html?id="+table.row('.selected').data()[0];
 		}
     } );
 	

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - Hubo Logistic</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/datatables.css" rel="stylesheet"/>
+        <link href="css/jquerydatatables.css" rel="stylesheet"/>
+        <script src="js/ajax.js"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Hubo Logistic</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            ><!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group"></div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="index.html">
+								<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+							</a>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Master Data
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+							</a>
+                            <div class="show" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+									<a class="nav-link" href="layout-data-kendaraan.html">Data Kendaraan</a>
+									<a class="nav-link" href="layout-data-driver.html">Data Driver</a>
+									<a class="nav-link" href="layout-data-customer.html">Data Customer</a>
+									<a class="nav-link" href="layout-daftar-harga.html">Daftar Harga</a>
+								</nav>
+                            </div>
+							
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"><div class="sb-nav-link-icon">
+							<i class="fas fa-book-open"></i></div>
+                                Transaction
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+							</a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link" href="layout-create-transaction.html">Create a Transaction</a>
+									<a class="nav-link" href="layout-incomplete-transaction.html">Incomplete</a>
+									<a class="nav-link" href="layout-complete-transaction.html">Complete</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Admin
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+					<div class="card shadow-lg border-0 rounded-lg">
+						<div class="card-header"><h3 class="text-center font-weight-light my-4">Update Data Harga</h3></div>
+						<div class="card-body">
+							<form>
+								<fieldset disabled>
+									<div class="form-group"><label class="small mb-1" for="idField">ID</label><input class="form-control py-4" id="id" type="text"/></div>
+								</fieldset>
+								<div class="form-row">
+									<div class="col-md-6">
+										<div class="form-group"><label class="small mb-1" for="inputFrom">From</label><input class="form-control py-4" id="inputFrom" type="text" placeholder="Enter From" /></div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group"><label class="small mb-1" for="inputTo">To</label><input class="form-control py-4" id="inputTo" type="text" placeholder="Enter To" /></div>
+									</div>
+								</div>
+								<div class="form-group"><label class="small mb-1" for="inputRpKg">Rp/kg</label><input class="form-control py-4" id="inputRpKg" type="text" placeholder="Enter Rp/kg" /></div>
+								<div class="form-group"><label class="small mb-1" for="inputBorongan">Borongan</label><input class="form-control py-4" id="inputBorongan" type="text" placeholder="Enter Borongan" /></div>
+								<div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" href="layout-daftar-harga.html" id="update">Update</a></div>
+							</form>
+						</div>
+					</div>
+					</div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Hubo Logistic 2020</div>
+                            <!--<div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>-->
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="updatedata/updatedaftarharga.js"></script>
+    </body>
+</html>
