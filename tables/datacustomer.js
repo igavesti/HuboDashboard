@@ -25,3 +25,29 @@ request.onload = function () {
 }
 
 request.send();
+
+$(document).ready(function() { 
+    $('#dataTable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+ 
+    $('#editButton').click( function () {
+		if ( table.row('.selected').length == 0 ) {
+			alert('Please select the row before edit');
+        }
+		else {
+			alert(table.row('.selected').data()[0]);
+		}
+    } );
+	
+	$('#insertButton').click( function () {
+		window.location.href = "layout-insert-data-customer.html";
+    } );
+} );
