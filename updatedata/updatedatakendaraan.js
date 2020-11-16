@@ -27,8 +27,9 @@ getDataRequest.onload = function () {
 	document.getElementById("inputTahunRegistrasi").value = data.tahun_registrasi;
 	document.getElementById("inputNomorBPKB").value = data.nomor_bpkb;
 	document.getElementById("inputTanggalBerlaku").value = data.tanggal_berlaku;
-	document.getElementById("inputSTNKDepan").value = data.image_stnk_depan;
-	document.getElementById("inputSTNKBelakang").value = data.image_stnk_belakang;
+		//TODO
+	//document.getElementById("inputSTNKDepan").value = data.image_stnk_depan;
+	//document.getElementById("inputSTNKBelakang").value = data.image_stnk_belakang;
   } else {
     console.log('ERROR')
     const errorMessage = document.createElement('marquee');
@@ -68,12 +69,29 @@ function updatedata() {
 		"tahun_registrasi": document.getElementById("inputTahunRegistrasi").value,
 		"nomor_bpkb": document.getElementById("inputNomorBPKB").value,
 		"tanggal_berlaku": document.getElementById("inputTanggalBerlaku").value,
-		"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
-		"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
+		//TODO
+		//"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
+		//"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
 		"id": document.getElementById("id").value
 	}
 	));
 }
 /*Update Data*/
+
+$(function () {
+
+    // INITIALIZE DATEPICKER PLUGIN
+    $('.datepicker').datepicker({
+        clearBtn: true,
+        format: "dd/mm/yyyy"
+    });
+
+
+    // FOR DEMO PURPOSE
+    $('#inputTanggalBerlaku').on('change', function () {
+        var pickedDate = $('input').val();
+        $('#pickedDate').html(pickedDate);
+    });
+});
 
 update_button.onclick = updatedata;

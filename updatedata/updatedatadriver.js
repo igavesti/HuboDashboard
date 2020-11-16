@@ -17,11 +17,12 @@ getDataRequest.onload = function () {
 	document.getElementById("inputTempatLahir").value = data.tempat_lahir;
 	document.getElementById("inputTanggalLahir").value = data.tanggal_lahir;
 	document.getElementById("inputDomisili").value = data.domisili;
-	document.getElementById("inputImageKTP").value = data.image_ktp;
-	document.getElementById("inputImageKK").value = data.image_kk;
-	document.getElementById("inputImageSKCK").value = data.image_skck;
-	document.getElementById("inputImageSuratKeterangan").value = data.image_surat_keterangan;
-	document.getElementById("inputImageSIM").value = data.image_sim;
+		//TODO
+	//document.getElementById("inputImageKTP").value = data.image_ktp;
+	//document.getElementById("inputImageKK").value = data.image_kk;
+	//document.getElementById("inputImageSKCK").value = data.image_skck;
+	//document.getElementById("inputImageSuratKeterangan").value = data.image_surat_keterangan;
+	//document.getElementById("inputImageSIM").value = data.image_sim;
   } else {
     console.log('ERROR')
     const errorMessage = document.createElement('marquee');
@@ -51,11 +52,32 @@ function updatedata() {
 		"tempat_lahir": document.getElementById("inputTempatLahir").value, 
 		"tanggal_lahir": document.getElementById("inputTanggalLahir").value, 
 		"domisili": document.getElementById("inputDomisili").value,
-		"image_ktp": document.getElementById("inputImageKTP").value
+		//TODO
+		//"image_ktp": document.getElementById("inputImageKTP").value
+		//"image_kk": document.getElementById("inputImageKK").value,
+		//"image_skck": document.getElementById("inputImageSKCK").value,
+		//"image_surat_keterangan": document.getElementById("inputImageSuratKeterangan").value,
+		//"image_sim": document.getElementById("inputImageSIM").value
 		"id": document.getElementById("id").value
 	}
 	));
 }
 /*Update Data*/
+
+$(function () {
+
+    // INITIALIZE DATEPICKER PLUGIN
+    $('.datepicker').datepicker({
+        clearBtn: true,
+        format: "dd/mm/yyyy"
+    });
+
+
+    // FOR DEMO PURPOSE
+    $('#inputTanggalLahir').on('change', function () {
+        var pickedDate = $('input').val();
+        $('#pickedDate').html(pickedDate);
+    });
+});
 
 update_button.onclick = updatedata;

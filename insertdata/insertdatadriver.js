@@ -17,8 +17,13 @@ function insertdata() {
 		"nama": document.getElementById("inputNama").value,
 		"tempat_lahir": document.getElementById("inputTempatLahir").value, 
 		"tanggal_lahir": document.getElementById("inputTanggalLahir").value, 
-		"domisili": document.getElementById("inputDomisili").value,
-		"image_ktp": document.getElementById("inputImageKTP").value
+		"domisili": document.getElementById("inputDomisili").value
+		//TODO
+		//"image_ktp": document.getElementById("inputImageKTP").value,
+		//"image_kk": document.getElementById("inputImageKK").value,
+		//"image_skck": document.getElementById("inputImageSKCK").value,
+		//"image_surat_keterangan": document.getElementById("inputImageSuratKeterangan").value,
+		//"image_sim": document.getElementById("inputImageSIM").value
 	}
 	));
 }

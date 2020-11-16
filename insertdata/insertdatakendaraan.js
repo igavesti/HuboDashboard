@@ -27,9 +27,10 @@ function insertdata() {
 		"warna_tnkb": document.getElementById("inputWarnaTnkb").value,
 		"tahun_registrasi": document.getElementById("inputTahunRegistrasi").value,
 		"nomor_bpkb": document.getElementById("inputNomorBPKB").value,
-		"tanggal_berlaku": document.getElementById("inputTanggalBerlaku").value,
-		"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
-		"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
+		"tanggal_berlaku": document.getElementById("inputTanggalBerlaku").value
+		//TODO
+		//"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
+		//"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
 	}
 	));
 }
