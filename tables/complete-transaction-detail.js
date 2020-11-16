@@ -6,21 +6,22 @@ customer = customer ? customer[1].replace(/"/g, '&quot;') : '';
 
 var table = $('#dataTable').DataTable();     
 
+document.getElementById('valueIDTransaction').innerHTML = id;
+document.getElementById('valueCustomer').innerHTML = customer;
 var request = new XMLHttpRequest();
 request.open('GET', 'https://hubo-service.herokuapp.com/detail-transaction/'+id, true);
 request.onload = function () {
 
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
-	document.getElementById('valueIDTransaction').innerHTML = data.id_transaction;
-	document.getElementById('valueCustomer').innerHTML = data.customer;
-	data.detailTransaction.forEach(detailTransaction => {
+	data.forEach(detailTransaction => {
 		table.row.add( [
+            detailTransaction.id,
             detailTransaction.no_pol,
-            detailTransaction.driver_name,
+            detailTransaction.nama_driver,
             detailTransaction.nama_barang,
-            detailTransaction.rute_from,
-            detailTransaction.rute_to,
+            detailTransaction.rute_awal,
+            detailTransaction.rute_tujuan,
             detailTransaction.no_do,
             detailTransaction.tanggal_muat,
             detailTransaction.tanggal_bongkar,
