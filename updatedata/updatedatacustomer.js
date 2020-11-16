@@ -45,7 +45,7 @@ function updatedata() {
 		"nama": document.getElementById("inputNama").value,
 		"alamat": document.getElementById("inputAlamat").value, 
 		"no_telp": document.getElementById("inputNoTelp").value, 
-		"pic": document.getElementById("inputPIC").value
+		"pic": document.getElementById("inputPIC").value,
 		"id": document.getElementById("id").value
 	}
 	));
