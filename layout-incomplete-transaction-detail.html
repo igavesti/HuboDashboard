@@ -89,9 +89,11 @@
                         <div class="card mb-4">
                             <div class="card-header"><i class="fas fa-table mr-1"></i>List Surat Jalan</div>
 							
-                            <div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="button_insert" href="#">Insert Data</a>
-								</div>
+							<div class="container-fluid mt-3">
+								<input class="btn btn-primary" type="button" id="insertButton" value="Insert">
+								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#completeModal">Complete</button>
+                            </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered stripe hover nowrap" id="dataTable" width="100%" cellspacing="0">
@@ -130,6 +132,49 @@
                 </footer>
             </div>
         </div>
+		
+		<!-- Cancel Modal -->
+		<div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="cancelModalLabel">Cancel</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Are you sure want to cancel this Transaction ?
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+				<button type="button" class="btn btn-primary" id="cancelButton">Yes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Complete Modal -->
+		<div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="completeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="completeModalLabel">Complete</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Are you sure want to complete this Transaction ?
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+				<button type="button" class="btn btn-primary" id="completeButton">Yes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>

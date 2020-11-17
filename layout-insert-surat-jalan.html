@@ -10,6 +10,8 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/datatables.css" rel="stylesheet"/>
         <link href="css/jquerydatatables.css" rel="stylesheet"/>
+        <link href="css/bootstrap-datepicker.css" rel="stylesheet"/>
+        <link href="css/date.css" rel="stylesheet"/>
         <script src="js/ajax.js"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -95,10 +97,17 @@
 								</div>
 								<div class="form-group"><label class="small mb-1" for="inputEmailAddress">No Do</label><input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter No Do" /></div>
 								<div class="form-group"><label class="small mb-1" for="inputEmailAddress">Tonase</label><input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter Tonas .. kg" /></div>
-								<div class="form-group">
-									<label for="exampleFormControlFile1">Upload Surat Jalan</label>
-									<input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".png, .jpg, .jpeg">
+								
+								<label class="small mb-1" for="inputTanggalMuat">Tanggal Muat</label>
+								<div class="datepicker date input-group">
+									<input type="text" placeholder="Enter Tanggal Muat" class="form-control py-4 input-group-append" id="inputTanggalMuat">
 								</div>
+								
+								<label class="small mb-1" for="inputTanggalBongkar">Tanggal Bongkar</label>
+								<div class="datepicker date input-group">
+									<input type="text" placeholder="Enter Tanggal Bongkar" class="form-control py-4 input-group-append" id="inputTanggalBongkar">
+								</div>
+								
 								<div class="form-group">
 									<label class="small mb-1" for="inputEmailAddress">Keterangan</label>
 									<input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter Keterangan" />
@@ -130,6 +139,7 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
         <script src="insertdata/create-delivery-note.js"></script>
     </body>
 </html>

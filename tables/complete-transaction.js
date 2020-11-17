@@ -8,10 +8,17 @@ request.onload = function () {
   if (request.status >= 200 && request.status < 400) {
     
 	data.forEach(incomplete_transaction => {
+		var status = incomplete_transaction.status;
+		if(status == "COMPLETE"){
+			status = status.fontcolor("green");
+		}
+		else {
+			status = status.fontcolor("red");
+		}
 		table.row.add( [
             incomplete_transaction.id,
             incomplete_transaction.fk_customer_id,
-            incomplete_transaction.status
+			status
         ] ).draw( false );
     });
   } else {

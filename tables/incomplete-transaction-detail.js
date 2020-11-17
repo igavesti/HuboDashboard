@@ -8,12 +8,24 @@ var table = $('#dataTable').DataTable();
 
 document.getElementById('valueIDTransaction').innerHTML = id;
 document.getElementById('valueCustomer').innerHTML = customer;
-var request = new XMLHttpRequest();
-request.open('GET', 'https://hubo-service.herokuapp.com/detail-transaction/'+id, true);
-request.onload = function () {
+
+var updateRequest = new XMLHttpRequest();
+
+updateRequest.onload = function () {
+  var data = this.response;
+  alert(data);
+  window.location.href = "layout-complete-transaction.html";
+}
+updateRequest.onerror = function () {
+  alert(this.statusText);
+}
+
+var getRequest = new XMLHttpRequest();
+getRequest.open('GET', 'https://hubo-service.herokuapp.com/detail-transaction/'+id, true);
+getRequest.onload = function () {
 
   var data = JSON.parse(this.response);
-  if (request.status >= 200 && request.status < 400) {
+  if (getRequest.status >= 200 && getRequest.status < 400) {
 	data.forEach(detailTransaction => {
 		table.row.add( [
             detailTransaction.id,
@@ -37,13 +49,36 @@ request.onload = function () {
   }
 }
 
-request.send();
+getRequest.send();
 
-var insert_button = document.getElementById('button_insert');
+var insert_button = document.getElementById('insertButton');
+var cancel_button = document.getElementById('cancelButton');
+var complete_button = document.getElementById('completeButton');
 
-//Do Something
 function insertdata() {
 	window.location.href = "layout-insert-surat-jalan.html?id="+id+"&customer="+customer;
 }
 
+function cancelTransaction() {
+	updateRequest.open("POST", 'https://hubo-service.herokuapp.com/incomplete-transaction/cancel', false);
+	updateRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	updateRequest.send(JSON.stringify(
+	{
+		"id": id
+	}
+	));
+}
+
+function completeTransaction() {
+	updateRequest.open("POST", 'https://hubo-service.herokuapp.com/incomplete-transaction/complete', false);
+	updateRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	updateRequest.send(JSON.stringify(
+	{
+		"id": id
+	}
+	));
+}
+
 insert_button.onclick = insertdata;
+cancel_button.onclick = cancelTransaction;
+complete_button.onclick = completeTransaction;
