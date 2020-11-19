@@ -19,7 +19,8 @@ getDataRequest.onload = function () {
   if (getDataRequest.status >= 200 && getDataRequest.status < 400) {
 	data.forEach(data_kendaraan => {
 	  var option = document.createElement("option");
-	  option.text = data_kendaraan.nama;
+	  option.setAttribute("data-tokens", data_kendaraan.id + " - " + data_kendaraan.nama);
+	  option.text = data_kendaraan.id + " - " + data_kendaraan.nama;
 	  customerIds.push(data_kendaraan.id);
 	  customerOption.add(option);
     });

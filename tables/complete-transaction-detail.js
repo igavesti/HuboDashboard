@@ -23,9 +23,9 @@ request.onload = function () {
             detailTransaction.rute_awal,
             detailTransaction.rute_tujuan,
             detailTransaction.no_do,
+            detailTransaction.tonase,
             detailTransaction.tanggal_muat,
             detailTransaction.tanggal_bongkar,
-            detailTransaction.tonase,
             detailTransaction.keterangan
         ] ).draw( false );
     });

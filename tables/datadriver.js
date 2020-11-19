@@ -7,19 +7,19 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     
-	data.forEach(data_kendaraan => {
+	data.forEach(data_driver => {
 		table.row.add( [
-            data_kendaraan.id,
-            data_kendaraan.nama,
-            data_kendaraan.tempat_lahir,
-            format(data_kendaraan.tanggal_lahir),
-            data_kendaraan.domisili,
-            data_kendaraan.status,
-            data_kendaraan.image_ktp,
-            data_kendaraan.image_kk,
-            data_kendaraan.image_skck,
-            data_kendaraan.image_surat_keterangan,
-            data_kendaraan.image_sim
+            data_driver.id,
+            data_driver.nama,
+            data_driver.tempat_lahir,
+            format(data_driver.tanggal_lahir),
+            data_driver.domisili,
+            data_driver.status,
+            data_driver.image_ktp,
+            data_driver.image_kk,
+            data_driver.image_skck,
+            data_driver.image_surat_keterangan,
+            data_driver.image_sim
         ] ).draw( false );
     });
   } else {
