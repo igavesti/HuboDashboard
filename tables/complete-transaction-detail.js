@@ -26,9 +26,8 @@ request.onload = function () {
             detailTransaction.tonase,
             detailTransaction.tanggal_muat,
             detailTransaction.tanggal_bongkar,
-            detailTransaction.keterangan
-			//TODO
-			//detailTransaction.image_surat_jalan
+            detailTransaction.keterangan,
+			detailTransaction.image_surat_jalan
         ] ).draw( false );
     });
   } else {

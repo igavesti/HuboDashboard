@@ -74,7 +74,7 @@ function updatedata() {
 		"nomor_bpkb": document.getElementById("inputNomorBPKB").value,
 		"tanggal_berlaku_stnk": document.getElementById("inputTanggalBerlakuSTNK").value,
 		"nomor_kir": document.getElementById("inputNomorKIR").value,
-		"tanggal_berlaku": document.getElementById("inputTanggalBerlakuKIR").value,
+		"tanggal_berlaku_kir": document.getElementById("inputTanggalBerlakuKIR").value,
 		//TODO
 		//"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
 		//"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
