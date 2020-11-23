@@ -17,7 +17,8 @@ function insertdata() {
 		"from": document.getElementById("inputFrom").value,
 		"to": document.getElementById("inputTo").value, 
 		"harga": document.getElementById("inputRpKg").value, 
-		"borongan": document.getElementById("inputBorongan").value
+		"borongan": document.getElementById("inputBorongan").value,
+		"jenis_kendaraan": document.getElementById("inputJenisKendaraan").value
 	}
 	));
 }

@@ -23,9 +23,13 @@ request.onload = function () {
             data_kendaraan.warna_tnkb,
             data_kendaraan.tahun_registrasi,
             data_kendaraan.nomor_bpkb,
-            format(data_kendaraan.tanggal_berlaku),
+            format(data_kendaraan.tanggal_berlaku_stnk),
+            data_kendaraan.nomor_kir,
+            format(data_kendaraan.tanggal_berlaku_kir),
             data_kendaraan.image_stnk_depan,
-            data_kendaraan.image_stnk_belakang
+            data_kendaraan.image_stnk_belakang,
+            data_kendaraan.image_kir_depan,
+            data_kendaraan.image_kir_belakang
         ] ).draw( false );
     });
   } else {

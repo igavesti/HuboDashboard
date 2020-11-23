@@ -13,7 +13,8 @@ request.onload = function () {
             data_kendaraan.from,
             data_kendaraan.to,
             data_kendaraan.harga,
-            data_kendaraan.borongan
+            data_kendaraan.borongan,
+            data_kendaraan.jenis_kendaraan
         ] ).draw( false );
     });
   } else {

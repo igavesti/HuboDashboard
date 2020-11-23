@@ -26,10 +26,14 @@ getDataRequest.onload = function () {
 	document.getElementById("inputWarnaTnkb").value = data.warna_tnkb;
 	document.getElementById("inputTahunRegistrasi").value = data.tahun_registrasi;
 	document.getElementById("inputNomorBPKB").value = data.nomor_bpkb;
-	document.getElementById("inputTanggalBerlaku").value = format(data.tanggal_berlaku);
+	document.getElementById("inputTanggalBerlakuSTNK").value = format(data.tanggal_berlaku_stnk);
+	document.getElementById("inputNomorKIR").value = data.nomor_kir;
+	document.getElementById("inputTanggalBerlakuKIR").value = format(data.tanggal_berlaku_kir);
 		//TODO
 	//document.getElementById("inputSTNKDepan").value = data.image_stnk_depan;
 	//document.getElementById("inputSTNKBelakang").value = data.image_stnk_belakang;
+	//document.getElementById("inputKIRDepan").value = data.image_kir_depan;
+	//document.getElementById(""inputKIRBelakang"").value = data.image_kir_belakang;
   } else {
     console.log('ERROR')
     const errorMessage = document.createElement('marquee');
@@ -68,10 +72,14 @@ function updatedata() {
 		"warna_tnkb": document.getElementById("inputWarnaTnkb").value,
 		"tahun_registrasi": document.getElementById("inputTahunRegistrasi").value,
 		"nomor_bpkb": document.getElementById("inputNomorBPKB").value,
-		"tanggal_berlaku": document.getElementById("inputTanggalBerlaku").value,
+		"tanggal_berlaku_stnk": document.getElementById("inputTanggalBerlakuSTNK").value,
+		"nomor_kir": document.getElementById("inputNomorKIR").value,
+		"tanggal_berlaku": document.getElementById("inputTanggalBerlakuKIR").value,
 		//TODO
 		//"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
 		//"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
+		//"image_kir_depan": document.getElementById("inputKIRDepan").value,
+		//"image_kir_belakang": document.getElementById("inputKIRBelakang").value,
 		"id": document.getElementById("id").value
 	}
 	));
@@ -88,7 +96,11 @@ $(function () {
 
 
     // FOR DEMO PURPOSE
-    $('#inputTanggalBerlaku').on('change', function () {
+    $('#inputTanggalBerlakuSTNK').on('change', function () {
+        var pickedDate = $('input').val();
+        $('#pickedDate').html(pickedDate);
+    });
+    $('#inputTanggalBerlakuKIR').on('change', function () {
         var pickedDate = $('input').val();
         $('#pickedDate').html(pickedDate);
     });

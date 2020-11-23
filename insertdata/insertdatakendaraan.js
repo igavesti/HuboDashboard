@@ -27,10 +27,14 @@ function insertdata() {
 		"warna_tnkb": document.getElementById("inputWarnaTnkb").value,
 		"tahun_registrasi": document.getElementById("inputTahunRegistrasi").value,
 		"nomor_bpkb": document.getElementById("inputNomorBPKB").value,
-		"tanggal_berlaku": document.getElementById("inputTanggalBerlaku").value
+		"tanggal_berlaku_stnk": document.getElementById("inputTanggalBerlakuSTNK").value,
+		"nomor_kir": document.getElementById("inputNomorKIR").value,
+		"tanggal_berlaku_kir": document.getElementById("inputTanggalBerlakuKIR").value
 		//TODO
 		//"image_stnk_depan": document.getElementById("inputSTNKDepan").value,
 		//"image_stnk_belakang": document.getElementById("inputSTNKBelakang").value,
+		//"image_kir_depan": document.getElementById("inputKIRDepan").value,
+		//"image_kir_belakang": document.getElementById("inputKIRBelakang").value,
 	}
 	));
 }
@@ -45,7 +49,11 @@ $(function () {
 
 
     // FOR DEMO PURPOSE
-    $('#inputTanggalBerlaku').on('change', function () {
+    $('#inputTanggalBerlakuSTNK').on('change', function () {
+        var pickedDate = $('input').val();
+        $('#pickedDate').html(pickedDate);
+    });
+    $('#inputTanggalBerlakuKIR').on('change', function () {
         var pickedDate = $('input').val();
         $('#pickedDate').html(pickedDate);
     });

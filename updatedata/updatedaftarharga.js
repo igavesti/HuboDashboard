@@ -17,6 +17,7 @@ getDataRequest.onload = function () {
 	document.getElementById("inputTo").value = data.to;
 	document.getElementById("inputRpKg").value = data.harga;
 	document.getElementById("inputBorongan").value = data.borongan;
+	document.getElementById("inputJenisKendaraan").value = data.jenis_kendaraan;
   } else {
     console.log('ERROR')
     const errorMessage = document.createElement('marquee');
@@ -46,6 +47,7 @@ function updatedata() {
 		"to": document.getElementById("inputTo").value, 
 		"harga": document.getElementById("inputRpKg").value, 
 		"borongan": document.getElementById("inputBorongan").value,
+		"jenis_kendaraan": document.getElementById("inputJenisKendaraan").value,
 		"id": document.getElementById("id").value
 	}
 	));

@@ -39,6 +39,8 @@ getRequest.onload = function () {
             detailTransaction.tanggal_muat,
             detailTransaction.tanggal_bongkar,
             detailTransaction.keterangan
+			//TODO
+			//detailTransaction.image_surat_jalan
         ] ).draw( false );
     });
   } else {
