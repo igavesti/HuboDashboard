@@ -22,6 +22,7 @@ request.onload = function () {
             detailTransaction.nama_barang,
             detailTransaction.rute_awal,
             detailTransaction.rute_tujuan,
+            detailTransaction.harga,
             detailTransaction.no_do,
             detailTransaction.tonase,
             detailTransaction.tanggal_muat,

@@ -29,6 +29,7 @@ function insertdata() {
 		"nama_barang": document.getElementById("inputNamaBarang").value,
 		"rute_awal": document.getElementById("inputRuteAsal").value,
 		"rute_tujuan": document.getElementById("inputRuteTujuan").value,
+		"harga": document.getElementById("inputHarga").value,
 		"no_do": document.getElementById("inputNoDo").value,
 		"tanggal_muat": document.getElementById("inputTanggalMuat").value,
 		"tanggal_bongkar": document.getElementById("inputTanggalBongkar").value,

@@ -34,6 +34,7 @@ getRequest.onload = function () {
             detailTransaction.nama_barang,
             detailTransaction.rute_awal,
             detailTransaction.rute_tujuan,
+            detailTransaction.harga,
             detailTransaction.no_do,
             detailTransaction.tonase,
             detailTransaction.tanggal_muat,
@@ -53,6 +54,7 @@ getRequest.onload = function () {
 getRequest.send();
 
 var insert_button = document.getElementById('insertButton');
+var print_button = document.getElementById('printButton');
 var cancel_button = document.getElementById('cancelButton');
 var complete_button = document.getElementById('completeButton');
 
@@ -80,6 +82,14 @@ function completeTransaction() {
 	));
 }
 
+function printButton() {
+	alert('printt');
+	var doc = new jsPDF();
+	doc.text('Hello World', 10,10);
+	doc.save('a4.pdf');
+}
+
 insert_button.onclick = insertdata;
+print_button.onclick = printButton;
 cancel_button.onclick = cancelTransaction;
 complete_button.onclick = completeTransaction;

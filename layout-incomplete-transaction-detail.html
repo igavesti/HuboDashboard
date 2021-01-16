@@ -11,6 +11,7 @@
         <link href="css/datatables.css" rel="stylesheet"/>
         <link href="css/jquerydatatables.css" rel="stylesheet"/>
         <script src="js/ajax.js"></script>
+        <script src="js/jspdf.debug.js"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -91,6 +92,7 @@
 							
 							<div class="container-fluid mt-3">
 								<input class="btn btn-primary" type="button" id="insertButton" value="Insert">
+								<input class="btn btn-primary" type="button" id="printButton" value="Print">
 								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#cancelModal">Cancel</button>
 								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#completeModal">Complete</button>
                             </div>
@@ -105,6 +107,7 @@
                                                 <th>Nama Barang</th>
                                                 <th>Rute Awal</th>
                                                 <th>Rute Tujuan</th>
+                                                <th>Harga</th>
                                                 <th>No Do</th>
                                                 <th>Tonase</th>
                                                 <th>Tanggal Muat</th>
