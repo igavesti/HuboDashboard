@@ -1,6 +1,11 @@
 var update_button = document.getElementById('update');
 var id = localStorage.getItem('idTable') == null ? '' : localStorage.getItem('idTable');
+
 localStorage.removeItem('idTable');
+
+if(id === '') {
+  window.location.href = "layout-data-driver.html";
+}
 
 document.getElementById("id").value = id;
 

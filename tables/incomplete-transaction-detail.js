@@ -6,6 +6,10 @@ localStorage.removeItem('transactionId');
 localStorage.removeItem('customerId');
 localStorage.removeItem('hal');
 
+if(id === '' || customer ==='' || hal ==='') {
+  window.location.href = "layout-incomplete-transaction.html";
+}
+
 var table = $('#dataTable').DataTable();     
 
 document.getElementById('valueIDTransaction').innerHTML = id;

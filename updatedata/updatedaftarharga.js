@@ -1,6 +1,11 @@
 var update_button = document.getElementById('update');
 var id = localStorage.getItem('idTable') == null ? '' : localStorage.getItem('idTable');
+
 localStorage.removeItem('idTable');
+
+if(id === '') {
+  window.location.href = "layout-daftar-harga.html";
+}
 
 document.getElementById("id").value = id;
 

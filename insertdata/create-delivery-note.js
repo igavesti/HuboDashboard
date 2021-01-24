@@ -6,6 +6,10 @@ localStorage.removeItem('transactionId');
 localStorage.removeItem('customerId');
 localStorage.removeItem('hal');
 
+if(id === '' || customer ==='' || hal ==='') {
+  window.location.href = "layout-incomplete-transaction.html";
+}
+
 var insert_button = document.getElementById('insert');
 
 
