@@ -225,7 +225,7 @@ function printButton() {
 	doc.setDrawColor(0, 0, 0);
 	doc.line(20, doc.lastAutoTable.finalY + 111, 55, doc.lastAutoTable.finalY + 111);
 	doc.text('Direktur', 20,doc.lastAutoTable.finalY + 120);
-	doc.save('a4.pdf');
+	doc.save(customerName + '_' +date.getDate() + '_' + months[date.getMonth()] + '_' + date.getFullYear() + '.pdf');
 	
 }
 
