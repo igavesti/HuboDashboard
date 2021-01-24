@@ -1,6 +1,6 @@
 var update_button = document.getElementById('update');
-var id = /[&?]id=([^&]+)/.exec(location.search);
-id = id ? id[1].replace(/"/g, '&quot;') : '';
+var id = localStorage.getItem('idTable') == null ? '' : localStorage.getItem('idTable');
+localStorage.removeItem('idTable');
 
 document.getElementById("id").value = id;
 

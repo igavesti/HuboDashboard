@@ -44,7 +44,8 @@ $(document).ready(function() {
 			alert('Please select the row before edit');
         }
 		else {
-			window.location.href = "layout-update-daftar-harga.html?id="+table.row('.selected').data()[0];
+			localStorage.setItem('idTable', table.row('.selected').data()[0]);
+			window.location.href = "layout-update-daftar-harga.html";
 		}
     } );
 	
