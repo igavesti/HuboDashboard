@@ -1,8 +1,10 @@
-var id = /[&?]id=([^&]+)/.exec(location.search);
-id = id ? id[1].replace(/"/g, '&quot;') : '';
+var id = localStorage.getItem('transactionId') == null ? '' : localStorage.getItem('transactionId');
+var customer = localStorage.getItem('customerId') == null ? '' : localStorage.getItem('customerId');
+var hal = localStorage.getItem('hal') == null ? '' : localStorage.getItem('hal');
 
-var customer = /[&?]customer=([^&]+)/.exec(location.search);
-customer = customer ? customer[1].replace(/"/g, '&quot;') : '';
+localStorage.removeItem('transactionId');
+localStorage.removeItem('customerId');
+localStorage.removeItem('hal');
 
 var insert_button = document.getElementById('insert');
 
@@ -11,8 +13,12 @@ var insertRequest = new XMLHttpRequest();
 
 insertRequest.onload = function () {
   var data = this.response;
-  alert(data)
-  window.location.href = "layout-incomplete-transaction-detail.html?id="+id+"&customer="+customer;
+  alert(data);
+  
+  localStorage.setItem('transactionId', id);
+  localStorage.setItem('customerId', customer);
+  localStorage.setItem('hal', hal);
+  window.location.href = "layout-incomplete-transaction-detail.html";
 }
 insertRequest.onerror = function () {
   alert(this.statusText)

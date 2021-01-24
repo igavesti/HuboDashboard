@@ -18,6 +18,7 @@ request.onload = function () {
 		table.row.add( [
             incomplete_transaction.id,
             incomplete_transaction.fk_customer_id,
+            incomplete_transaction.hal,
 			status
         ] ).draw( false );
     });
@@ -36,6 +37,9 @@ $(document).ready(function() {
     var table = $('#dataTable').DataTable();
  
     $('#dataTable tbody').on( 'click', 'tr', function () {
-		window.location.href = "layout-complete-transaction-detail.html?id="+table.row( this ).data()[0]+"&customer="+table.row( this ).data()[1];
+		localStorage.setItem('transactionId', table.row( this ).data()[0]);
+		localStorage.setItem('customerId', table.row( this ).data()[1]);
+		localStorage.setItem('hal', table.row( this ).data()[2]);
+		window.location.href = "layout-complete-transaction-detail.html";
     } );
 } );

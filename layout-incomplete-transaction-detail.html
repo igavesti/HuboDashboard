@@ -11,11 +11,8 @@
         <link href="css/datatables.css" rel="stylesheet"/>
         <link href="css/jquerydatatables.css" rel="stylesheet"/>
         <script src="js/ajax.js"></script>
-        <script type="text/javascript" src="js/jspdf.debug.js"></script>
-        <script type="text/javascript" src="js/png_support.js"></script>
-        <script type="text/javascript" src="js/addimage.js"></script>
-        <script type="text/javascript" src="js/libs/png.js"></script>
-        <script type="text/javascript" src="js/libs/zlib.js"></script>
+        <script type="text/javascript" src="js/jspdf.min.js"></script>
+        <script type="text/javascript" src="js/jspdf.plugin.autotable.js"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -90,6 +87,10 @@
 							<label for="labelCustomer" id="labelCustomer" class="col-form-label form-control-lg">Customer ID :</label>
 							<label for="valueCustomer" id="valueCustomer" class="col-form-label form-control-lg"></label>
 						  </div>
+						  <div class="form-group row">
+							<label for="labelCustomer" id="labelCustomer" class="col-form-label form-control-lg">Hal :</label>
+							<label for="valueHal" id="valueHal" class="col-form-label form-control-lg"></label>
+						  </div>
 						</form>
                         <div class="card mb-4">
                             <div class="card-header"><i class="fas fa-table mr-1"></i>List Surat Jalan</div>
@@ -111,7 +112,7 @@
                                                 <th>Nama Barang</th>
                                                 <th>Rute Awal</th>
                                                 <th>Rute Tujuan</th>
-                                                <th>Harga</th>
+                                                <th>Harga/Kg</th>
                                                 <th>No Do</th>
                                                 <th>Tonase</th>
                                                 <th>Tanggal Muat</th>

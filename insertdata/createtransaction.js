@@ -39,7 +39,8 @@ function insertdata() {
 	insertDataRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	insertDataRequest.send(JSON.stringify(
 	{
-		"fk_customer_id": customerIds[customerOption.selectedIndex]
+		"fk_customer_id": customerIds[customerOption.selectedIndex],
+		"hal": document.getElementById("inputHal").value,
 	}
 	));
 }

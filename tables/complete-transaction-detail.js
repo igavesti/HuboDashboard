@@ -1,13 +1,17 @@
-var id = /[&?]id=([^&]+)/.exec(location.search);
-id = id ? id[1].replace(/"/g, '&quot;') : '';
+var id = localStorage.getItem('transactionId') == null ? '' : localStorage.getItem('transactionId');
+var customer = localStorage.getItem('customerId') == null ? '' : localStorage.getItem('customerId');
+var hal = localStorage.getItem('hal') == null ? '' : localStorage.getItem('hal');
 
-var customer = /[&?]customer=([^&]+)/.exec(location.search);
-customer = customer ? customer[1].replace(/"/g, '&quot;') : '';
+localStorage.removeItem('transactionId');
+localStorage.removeItem('customerId');
+localStorage.removeItem('hal');
 
 var table = $('#dataTable').DataTable();     
 
 document.getElementById('valueIDTransaction').innerHTML = id;
 document.getElementById('valueCustomer').innerHTML = customer;
+document.getElementById('valueHal').innerHTML = hal;
+
 var request = new XMLHttpRequest();
 request.open('GET', 'https://hubo-service.herokuapp.com/detail-transaction/'+id, true);
 request.onload = function () {
